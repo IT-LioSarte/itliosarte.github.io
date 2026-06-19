@@ -69,9 +69,20 @@ header{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(15,23,42,0.75)),
+    url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
     color:white;
-    padding:20px;
+}
+    .hero-content{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    max-width:850px;
 }
 
 .hero-content h1{
@@ -250,11 +261,10 @@ footer{
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>Hello, I'm <span>Lio Sarte</span></h1>
-<h2>Information Technology Faculty</h2>
-
+<h2>Information Technology Educator</h2>
 <p>
-Passionate educator dedicated to empowering students through technology,
-innovation, research, and industry-relevant learning experiences.
+Empowering future IT professionals through innovative teaching,
+research, software development, and industry-driven learning experiences.
 </p>
 
 <a href="#about" class="btn">Explore Portfolio</a>
