@@ -222,9 +222,18 @@ section{
     box-shadow:0 10px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
+/* HOVER EFFECT */
+.skill-card:hover {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
 
-.skill-card:hover{
-    transform:translateY(-8px);
+/* para magbago din text colors sa loob */
+.skill-card:hover h3,
+.skill-card:hover p {
+    color: white;
 }
 
 .skill-card h3{
@@ -241,6 +250,26 @@ section{
     box-shadow:0 10px 20px rgba(0,0,0,.08);
     line-height:1.9;
 }
+	.timeline-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.timeline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-left: 5px solid #1e40af; /* accent color */
+}
+
+/* Optional: title highlight */
+.timeline-card:hover h3 {
+    color: #1e40af;
+}
+
 
 /* ================= PROJECTS ================= */
 
@@ -554,7 +583,7 @@ developing technology-driven solutions, and preparing students for successful ca
 
 <h2 class="section-title">Professional Experience</h2>
 
-<div class="timeline">
+<div class="timeline-card">
 
 <h3>Information Technology Faculty Member</h3>
 <h3>STI College Cubao</h3>
