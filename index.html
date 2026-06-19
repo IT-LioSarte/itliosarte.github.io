@@ -222,7 +222,7 @@ section{
     box-shadow:0 10px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
-/* HOVER EFFECT */
+
 .skill-card:hover {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     color: white;
@@ -250,7 +250,7 @@ section{
     box-shadow:0 10px 20px rgba(0,0,0,.08);
     line-height:1.9;
 }
-	.timeline-card {
+.timeline-card {
     background: #fff;
     border-radius: 15px;
     padding: 25px;
@@ -270,7 +270,6 @@ section{
     color: #1e40af;
 }
 
-
 /* ================= PROJECTS ================= */
 
 .projects-grid{
@@ -279,26 +278,38 @@ section{
     gap:30px;
 }
 
+/* ================= PROJECT HOVER EFFECT ================= */
+
 .project-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
+.project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-left: 5px solid #1e40af; /* accent color */
+
+}
+
+/* optional image zoom effect */
 .project-card img{
     width:100%;
     height:220px;
     object-fit:cover;
+    transition: transform 0.3s ease;
 }
 
-.project-content{
-    padding:25px;
+.project-card:hover img{
+    transform: scale(1.05);
 }
 
-.project-content h3{
-    color:#1e3a8a;
-    margin-bottom:10px;
+/* optional text color accent on hover */
+.project-card:hover h3{
+     color: #1e40af;
 }
 
 /* ================= CERTIFICATES ================= */
@@ -393,6 +404,8 @@ footer{
 
 </header>
 
+
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -448,6 +461,8 @@ research, and industry-driven learning experiences.
 
 </section>
 
+
+
 <section id="about">
 
 <div class="container">
@@ -482,6 +497,7 @@ developing technology-driven solutions, and preparing students for successful ca
 </div>
 
 </section>
+
 
 <section id="skills">
 
@@ -550,32 +566,6 @@ developing technology-driven solutions, and preparing students for successful ca
 </section>
 
 
-<section id="skills">
-
-<div class="container">
-
-<h2 class="section-title">Other Skills</h2>
-
-<div class="skills-grid">
-    
-<div class="skill-card">
-    <h3>Point-of-Sale (POS) Systems</h3>
-    <p>Sales processing, inventory monitoring, and transaction management.</p>
-</div>
-
-<div class="skill-card">
-    <h3>Cashiering Operations</h3>
-    <p>Cash handling, payment processing, and financial reconciliation.</p>
-</div>
-
-<div class="skill-card">
-    <h3>Sales & Customer Service</h3>
-    <p>Customer engagement, product promotion, and relationship management.</p>
-</div>
-
-</div>
-
-</section>
 
 <section id="experience">
 
@@ -613,6 +603,8 @@ and information systems.
 </div>
 
 </section>
+
+
 
 <section id="projects">
 
@@ -652,6 +644,7 @@ and information systems.
 
 </section>
 
+
 <section id="certificates">
 
 <div class="container">
@@ -681,6 +674,8 @@ and information systems.
 
 </section>
 
+
+
 <section id="contact">
 
 <div class="container">
@@ -701,7 +696,7 @@ and information systems.
 </section>
 
 <footer>
-© 2026 Julio L. Sarte Jr. | Information Technology Educator Portfolio
+© 2026 Julio P. Sarte Jr. | Information Technology Professional Portfolio
 </footer>
 
 </body>
