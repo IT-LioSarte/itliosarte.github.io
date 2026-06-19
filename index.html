@@ -1,37 +1,425 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lio Sarte Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lio Sarte | IT Faculty Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content p{
+    margin-top:15px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0284c7;
+}
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:#0f172a;
+    font-size:2rem;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.certificates{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.cert-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.about{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:10px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
 </head>
+
 <body>
-    <h1>Lio Sarte</h1>
-    <h2>Information Technology Faculty</h2>
 
-    <h3>About Me</h3>
-    <p>
-        I am an IT educator passionate about teaching,
-        software development, and technology innovation.
-    </p>
+<header>
+<div class="navbar">
+<div class="logo">Lio Sarte</div>
 
-    <h3>Skills</h3>
-    <ul>
-        <li>Java Programming</li>
-        <li>Python Programming</li>
-        <li>Database Management</li>
-        <li>Mobile Development</li>
-    </ul>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</header>
 
-    <h3>Projects</h3>
-    <ul>
-        <li>Student Information System</li>
-        <li>Mobile Attendance App</li>
-        <li>Capstone Research Projects</li>
-    </ul>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Hello, I'm <span>Lio Sarte</span></h1>
+<h2>Information Technology Faculty</h2>
 
-    <h3>Certificates</h3>
-    <p>Certificates and trainings will be uploaded here.</p>
+<p>
+Passionate educator dedicated to empowering students through technology,
+innovation, research, and industry-relevant learning experiences.
+</p>
 
-    <h3>Contact</h3>
-    <p>Email: your_email@example.com</p>
+<a href="#about" class="btn">Explore Portfolio</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<div class="profile">
+<img src="https://via.placeholder.com/250" alt="Profile">
+</div>
+
+<div>
+<p>
+I am an Information Technology faculty member with experience in
+teaching programming, database systems, mobile development,
+and information systems. I am committed to helping students
+develop technical and professional skills needed in the IT industry.
+</p>
+
+<br>
+
+<p>
+My interests include software development, educational technology,
+research, and community extension projects that promote innovation
+and digital transformation.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Programming</h3>
+<p>Java, Python, PHP</p>
+</div>
+
+<div class="skill-card">
+<h3>Database</h3>
+<p>MySQL, SQL Server</p>
+</div>
+
+<div class="skill-card">
+<h3>Web Development</h3>
+<p>HTML, CSS, JavaScript</p>
+</div>
+
+<div class="skill-card">
+<h3>Mobile Development</h3>
+<p>Android Studio</p>
+</div>
+
+<div class="skill-card">
+<h3>Research</h3>
+<p>Capstone & Academic Research</p>
+</div>
+
+<div class="skill-card">
+<h3>Teaching</h3>
+<p>Curriculum & Instruction</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Student Information System</h3>
+<p>
+A web-based system designed to manage student records and academic information.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Attendance Monitoring App</h3>
+<p>
+Mobile application for recording attendance using QR code technology.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Capstone Research Projects</h3>
+<p>
+Collection of research and development projects supervised and evaluated.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="certificates">
+<div class="container">
+
+<h2 class="section-title">Certificates & Trainings</h2>
+
+<div class="certificates">
+
+<div class="cert-card">
+<h3>TESDA Certification</h3>
+<p>Add your certification details here.</p>
+</div>
+
+<div class="cert-card">
+<h3>Faculty Development</h3>
+<p>Add your training details here.</p>
+</div>
+
+<div class="cert-card">
+<h3>Seminars & Workshops</h3>
+<p>Add your seminar details here.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact">
+<p>📧 your_email@gmail.com</p>
+<p>💼 LinkedIn Profile</p>
+<p>💻 GitHub Profile</p>
+<p>📍 Philippines</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Lio Sarte | Information Technology Faculty Portfolio</p>
+</footer>
+
 </body>
 </html>
