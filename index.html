@@ -135,6 +135,54 @@ section{
         #f1f5f9
     );
 }
+    .about,
+.skills-grid,
+.projects-grid,
+.certificates,
+.contact{
+    position:relative;
+    z-index:2;
+}
+
+.skill-card,
+.project-card,
+.cert-card{
+    transition:0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.cert-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+    #skills{
+    background:
+    linear-gradient(rgba(255,255,255,.95),
+    rgba(255,255,255,.95)),
+    url('https://www.transparenttextures.com/patterns/circuit-board.png');
+}
+
+#projects{
+    background:
+    linear-gradient(rgba(239,246,255,.95),
+    rgba(219,234,254,.95)),
+    url('https://www.transparenttextures.com/patterns/circuit-board.png');
+}
+
+#certificates{
+    background:
+    linear-gradient(rgba(255,255,255,.95),
+    rgba(255,255,255,.95)),
+    url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+#contact{
+    background:
+    linear-gradient(rgba(248,250,252,.95),
+    rgba(226,232,240,.95)),
+    url('https://www.transparenttextures.com/patterns/circuit-board.png');
+}
 
 .about{
     background:white;
